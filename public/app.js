@@ -6,6 +6,7 @@ angular.module('todoApp', [])
     todoList.sumbook = []
     todoList.add = function (id, name, price) {
       // console.log(id, name, price)
+      console.log(todoList.sumbook)
       var book = {
         'id': id,
         'name': name,
