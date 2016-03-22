@@ -7,6 +7,34 @@
   <title>Document</title>
 </head>
 <body ng-controller="TodoListController as todoList" >
-{{todoList.test}}
+  <div ng-repeat="show in todoList.sumbook">
+    {{show.id}}
+    {{show.name}}
+    {{show.price}}
+    {{show.countbook}}
+  </div>
+  <div class="" >
+    <img src="image/1.jpg" alt="" height="300" width="auto" ng-click="todoList.add(1,'harry potter 1',100)"/>
+  </div>
+  <div class="">
+    <img src="image/2.jpg" alt="" height="300" width="auto" ng-click="todoList.add(2,'harry potter 2',100)"/>
+  </div>
+  <div class="">
+    <img src="image/3.jpg" alt="" height="300" width="auto" ng-click="todoList.add(3,'harry potter 3',100)"/>
+  </div>
+  <div class="">
+    <img src="image/4.jpg" alt="" height="300" width="auto" ng-click="todoList.add(4,'harry potter 4',100)"/>
+  </div>
+  <div class="">
+    <img src="image/5.jpg" alt="" height="300" width="auto" ng-click="todoList.add(5,'harry potter 5',100)"/>
+  </div>
+  <div class="">
+    <img src="image/6.jpg" alt="" height="300" width="auto" ng-click="todoList.add(6,'harry potter 6',100)"/>
+  </div>
+  <div class="">
+    <img src="image/7.jpg" alt="" height="300" width="auto" ng-click="todoList.add(7,'harry potter 7',100)"/>
+  </div>
+
+
 </body>
 </html>
