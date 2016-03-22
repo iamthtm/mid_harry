@@ -1,7 +1,5 @@
 /* --------------------------------
-
 Primary style
-
 -------------------------------- */
 html * {
   -webkit-font-smoothing: antialiased;
@@ -31,7 +29,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  max-width: 60%;
 }
 
 /* --------------------------------
@@ -41,10 +39,11 @@ Modules - reusable parts of our design
 -------------------------------- */
 .cd-container {
   /* this class is used to horizontally align the gallery of items */
-  position: relative;
+  height: 1200px;
   width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
+  max-height: 1100px;
+  margin: -15px auto;
 }
 .cd-container::after {
   /* clearfix */
@@ -364,14 +363,14 @@ main {
 #cd-gallery-items li img {
   width: 100%;
   display: block;
-  border-radius: 0.25em;
+  border-radius: 1em;
 }
 @media only screen and (min-width: 768px) {
   #cd-gallery-items li {
     width: 48%;
     float: left;
     margin-bottom: 2em;
-    margin-right: 4%;
+    margin-right: -7.5%;
   }
   #cd-gallery-items li:nth-child(2n) {
     margin-right: 0;
@@ -382,10 +381,10 @@ main {
     width: 31%;
     float: left;
     margin-bottom: 2.5em;
-    margin-right: 3.5%;
+    margin-right: -7.5%;
   }
   #cd-gallery-items li:nth-child(2n) {
-    margin-right: 3.5%;
+    margin-right: -7.5%;
   }
   #cd-gallery-items li:nth-child(3n) {
     margin-right: 0;
