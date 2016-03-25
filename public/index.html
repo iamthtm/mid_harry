@@ -49,18 +49,19 @@
 
   <div id="cd-cart" class="active speed-in">
 		<h2>Cart</h2>
-        	<h2>Count
+    <h2>Count
         Namebook
-      Price</h2>
+        Price</h2>
     <div ng-repeat="show in todoList.sumbook">
        {{show.countbook}}x
        {{show.name}}
-       {{show.price}}$
-       <a href="#0" class="cd-item-remove cd-img-replace">Remove</a>
-     </div>
-
+       {{show.price*show.countbook}}$
+    </div>
+    <!-- <a href="#0" class="cd-item-remove cd-img-replace">Remove</a> -->
 		<div class="cd-cart-total">
-			<p>Total <span></span></p>
+      <p>Sum of Price <span>{{todoList.showTotal}}$</span></p>
+      <p>Discount <span>{{todoList.bookDiscountTotal}}$</span></p>
+			<p>Total <span>{{todoList.showTotal-todoList.bookDiscountTotal}}$</span></p>
 		</div> <!-- cd-cart-total -->
 
 		<a href="#0" class="checkout-btn">Checkout</a>

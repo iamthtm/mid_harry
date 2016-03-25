@@ -362,7 +362,6 @@ main {
 }
 #cd-gallery-items li img {
   width: 100%;
-  display: block;
   border-radius: 1em;
 }
 @media only screen and (min-width: 768px) {
