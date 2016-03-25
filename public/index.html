@@ -23,50 +23,49 @@
 	<main>
 		<ul id="cd-gallery-items" class="cd-container">
 			<li>
-				<img src="image/1.jpg" alt="Preview image" ng-click="todoList.add(1,'Harry Potter แล่ม 1',100)">
+				<img src="image/1.jpg" alt="Preview image" ng-click="todoList.add(1,'Harry Potter เล่ม 1',100)" >
 			</li>
       <li>
-				<img src="image/2.jpg" alt="Preview image" ng-click="todoList.add(2,'Harry Potter แล่ม 2',100)">
+				<img src="image/2.jpg" alt="Preview image" ng-click="todoList.add(2,'Harry Potter เล่ม 2',100)">
 			</li>
       <li>
-				<img src="image/3.jpg" alt="Preview image" ng-click="todoList.add(3,'Harry Potter แล่ม 3',100)">
+				<img src="image/3.jpg" alt="Preview image" ng-click="todoList.add(3,'Harry Potter เล่ม 3',100)">
 			</li>
       <li>
-				<img src="image/4.jpg" alt="Preview image" ng-click="todoList.add(4,'Harry Potter แล่ม 4',100)">
+				<img src="image/4.jpg" alt="Preview image" ng-click="todoList.add(4,'Harry Potter เล่ม 4',100)">
 			</li>
       <li>
-				<img src="image/5.jpg" alt="Preview image" ng-click="todoList.add(5,'Harry Potter แล่ม 5',100)">
+				<img src="image/5.jpg" alt="Preview image" ng-click="todoList.add(5,'Harry Potter เล่ม 5',100)">
 			</li>
       <li>
-				<img src="image/6.jpg" alt="Preview image" ng-click="todoList.add(6,'Harry Potter แล่ม 6',100)">
+				<img src="image/6.jpg" alt="Preview image" ng-click="todoList.add(6,'Harry Potter เล่ม 6',100)">
 			</li>
       <li>
-				<img src="image/7.jpg" alt="Preview image" ng-click="todoList.add(7,'Harry Potter แล่ม 7',100)">
+				<img src="image/7.jpg" alt="Preview image" ng-click="todoList.add(7,'Harry Potter เล่ม 7',100)">
 			</li>
 		</ul>
 	</main>
-	<div id="cd-shadow-layer"></div>
 
   <div id="cd-cart" class="active speed-in">
 		<h2>Cart</h2>
-    <h2>Count
-        Namebook
-        Price</h2>
-    <div ng-repeat="show in todoList.sumbook">
-       {{show.countbook}}x
-       {{show.name}}
-       {{show.price*show.countbook}}$
-    </div>
-    <!-- <a href="#0" class="cd-item-remove cd-img-replace">Remove</a> -->
+    <table width="100%" border="2">
+      <tr >
+        <th width="20px" style="padding-left:25px;">Count</th>
+        <th>Namebook</th>
+        <th width="25px" style="padding-right:25px;">Price</th>
+      </tr>
+      <tr ng-repeat="show in todoList.sumbook">
+        <h2><td width="20px" style="padding-left:25px;" align="center">{{show.countbook}}</td>
+        <td align="center">{{show.name}}</td>
+        <td width="25px" style="padding-right:25px;">{{show.price*show.countbook}}$</td></h2>
+      </tr>
+    </table>
 		<div class="cd-cart-total">
       <p>Sum of Price <span>{{todoList.showTotal}}$</span></p>
       <p>Discount <span>{{todoList.bookDiscountTotal}}$</span></p>
 			<p>Total <span>{{todoList.showTotal-todoList.bookDiscountTotal}}$</span></p>
 		</div> <!-- cd-cart-total -->
-
-		<a href="#0" class="checkout-btn">Checkout</a>
-
-		<p class="cd-go-to-cart"><a href="#0">Go to cart page</a></p>
+		<a href="#" class="checkout-btn">Checkout</a>
 	</div> <!-- cd-cart -->
 
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
