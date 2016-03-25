@@ -33,13 +33,10 @@ img {
 }
 
 /* --------------------------------
-
 Modules - reusable parts of our design
-
 -------------------------------- */
 .cd-container {
   /* this class is used to horizontally align the gallery of items */
-  height: 1200px;
   width: 90%;
   max-width: 1200px;
   max-height: 1100px;
@@ -362,6 +359,7 @@ main {
 }
 #cd-gallery-items li img {
   width: 100%;
+  display: block;
   border-radius: 1em;
 }
 @media only screen and (min-width: 768px) {

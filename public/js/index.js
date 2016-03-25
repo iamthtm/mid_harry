@@ -1,11 +1,12 @@
+/*global jQuery, $*/
 jQuery(document).ready(function ($) {
   // if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
-  var $L = 1200,
-    $menu_navigation = $('#main-nav'),
-    $cart_trigger = $('#cd-cart-trigger'),
-    $hamburger_icon = $('#cd-hamburger-menu'),
-    $lateral_cart = $('#cd-cart'),
-    $shadow_layer = $('#cd-shadow-layer')
+  var $L = 1200
+  var $menu_navigation = $('#main-nav')
+  var $cart_trigger = $('#cd-cart-trigger')
+  var $hamburger_icon = $('#cd-hamburger-menu')
+  var $lateral_cart = $('#cd-cart')
+  var $shadow_layer = $('#cd-shadow-layer')
 
   // open lateral menu on mobile
   $hamburger_icon.on('click', function (event) {
