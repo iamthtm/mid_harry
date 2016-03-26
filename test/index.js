@@ -12,12 +12,9 @@ describe('nightmareJs and mocha and chai', function () {
   it('ซื้อHarry Potterเล่ม 1 จำนวน 2 เล่ม,ซื้อHarry Potterเล่ม 2 จำนวน 1 เล่ม,ซื้อHarry Potterเล่ม 3 จำนวน 1 เล่ม ส่วนลดต้องเท่ากับ 60', function * () {
     var case2 = yield nightmare
       .goto('http://localhost:5000')
-
       .click('#b1')
       .click('#b1')
-
       .click('#b2')
-
       .click('#b3')
       .evaluate(function () {
         this.price = document.querySelector('#discountTotal').innerHTML
@@ -28,14 +25,10 @@ describe('nightmareJs and mocha and chai', function () {
   it('ซื้อHarry Potterเล่ม 1 จำนวน 1 เล่ม,ซื้อHarry Potterเล่ม 2 จำนวน 1 เล่ม,ซื้อHarry Potterเล่ม 3 จำนวน 2 เล่ม,ซื้อHarry Potterเล่ม 4 จำนวน 1 เล่มเล่มส่วนลดต้องเท่ากับ 120', function * () {
     var case1 = yield nightmare
       .goto('http://localhost:5000')
-
       .click('#b1')
-
       .click('#b2')
-
       .click('#b3')
       .click('#b3')
-
       .click('#b4')
       .evaluate(function () {
         this.price = document.querySelector('#discountTotal').innerHTML
@@ -46,21 +39,17 @@ describe('nightmareJs and mocha and chai', function () {
   it('ซื้อHarry Potterเล่ม 3 จำนวน 3 เล่ม,ซื้อHarry Potterเล่ม 4 จำนวน 4 เล่ม,ซื้อHarry Potterเล่ม 5 จำนวน 4 เล่ม,ซื้อHarry Potterเล่ม 6 จำนวน 1 เล่มส่วนลดต้องเท่ากับ 260', function * () {
     var case3 = yield nightmare
       .goto('http://localhost:5000')
-
       .click('#b3')
       .click('#b3')
       .click('#b3')
-
       .click('#b4')
       .click('#b4')
       .click('#b4')
       .click('#b4')
-
       .click('#b5')
       .click('#b5')
       .click('#b5')
       .click('#b5')
-
       .click('#b6')
       .evaluate(function () {
         this.price = document.querySelector('#discountTotal').innerHTML
@@ -71,16 +60,13 @@ describe('nightmareJs and mocha and chai', function () {
   it('ซื้อHarry Potterเล่ม 5 จำนวน 4 เล่ม,ซื้อHarry Potterเล่ม 6 จำนวน 3 เล่ม,ซื้อHarry Potterเล่ม 7 จำนวน 6 เล่ม ส่วนลดต้องเท่ากับ 200', function * () {
     var case4 = yield nightmare
       .goto('http://localhost:5000')
-
       .click('#b5')
       .click('#b5')
       .click('#b5')
       .click('#b5')
-
       .click('#b6')
       .click('#b6')
       .click('#b6')
-
       .click('#b7')
       .click('#b7')
       .click('#b7')
