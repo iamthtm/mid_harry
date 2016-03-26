@@ -72,6 +72,24 @@ describe('nightmareJs and mocha and chai', function () {
       })
     case4.should.equal('120')
   })
+  it('ซื้อHarry Potter ทั้งหมด 3 ภาค ภาคละ 3 เล่ม ส่วนลดต้องเท่ากับ 180', function * () {
+    var case4 = yield nightmare
+      .goto('http://localhost:5000')
+      .click('#b1')
+      .click('#b1')
+      .click('#b1')
+      .click('#b2')
+      .click('#b2')
+      .click('#b2')
+      .click('#b3')
+      .click('#b3')
+      .click('#b3')
+      .evaluate(function () {
+        this.price = document.querySelector('#discountTotal').innerHTML
+        return this.price.substr(1, this.price.length - 1)
+      })
+    case4.should.equal('180')
+  })
   it('ซื้อHarry Potter ทั้งหมด 5 ภาค ภาคละ 1 เล่ม ส่วนลดต้องเท่ากับ 200', function * () {
     var case4 = yield nightmare
       .goto('http://localhost:5000')
@@ -120,24 +138,6 @@ describe('nightmareJs and mocha and chai', function () {
         return this.price.substr(1, this.price.length - 1)
       })
     case4.should.equal('420')
-  })
-  it('ซื้อHarry Potter ทั้งหมด 3 ภาค ภาคละ 3 เล่ม ส่วนลดต้องเท่ากับ 180', function * () {
-    var case4 = yield nightmare
-      .goto('http://localhost:5000')
-      .click('#b1')
-      .click('#b1')
-      .click('#b1')
-      .click('#b2')
-      .click('#b2')
-      .click('#b2')
-      .click('#b3')
-      .click('#b3')
-      .click('#b3')
-      .evaluate(function () {
-        this.price = document.querySelector('#discountTotal').innerHTML
-        return this.price.substr(1, this.price.length - 1)
-      })
-    case4.should.equal('180')
   })
   it('ซื้อHarry Potter ทั้งหมด 4  ภาค โดยภาคละ 3 เล่ม 1 ภาค 4เล่ม 2 ภาคและ 1 เล่ม 1 ภาค ส่วนลดต้องเท่ากับ 260', function * () {
     var case3 = yield nightmare
